@@ -661,12 +661,12 @@ objects:
 
 parameters:
 - name: OPENSHIFT_PROJECT_NAME
-  displayName: Name of the OpenShift project.
+  displayName: Name of the OpenShift project
   required: true
   value: wso2
 
 - name: NAME
-  displayName: Name of the deployment.
+  displayName: Name of the deployment
   required: true
   value: wso2is
 
@@ -726,6 +726,7 @@ parameters:
   value: '2Gi'
 
 - name: WSO2_IS_SERVICE_ACCOUNT_NAME
-  displayName:
+  displayName: Service Name
   required: true
   value: wso2svc-account
+
