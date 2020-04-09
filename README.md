@@ -1,27 +1,11 @@
-## Prerequisites
+# Openshift Resources for WSO2 Identity And Access Management
 
-1. An already setup OpenShit cluster.
+*Openshift Resources for container-based deployments of WSO2 Identity Server deployment patterns.*
 
-2. Three NFS shares for storage. For step by step guide on how to install NFS server refer here. [CentOS](https://www.server-world.info/en/note?os=CentOS_7&p=nfs&f=1), [Ubuntu](https://www.server-world.info/en/note?os=Ubuntu_18.04&p=nfs&f=1)
+* A clustered deployment of WSO2 Identity Server
 
-## Identity Server
+## Deploy Openshift resources
 
-1. Create a OpenShift project name `wso2`.
+In order to deploy Openshift resources for each deployment pattern, follow the **Quick Start Guide** for each deployment pattern given below:
 
-   `oc new-project wso2`
-
-2. Add your subscription details.
-
-   `oc create secret docker-registry wso2-image-pull-secret --docker-server=docker.wso2.com --docker-username=<SUBSCRIPTION_USERNAME> --docker-password=<SUBSCRIPTION_PASSWORD>`
-
-3. Deploy WSO2 Identity Server HA cluster.
-
-   `oc process -f Template.yaml -p NFS_SERVER_IP=<NFS_SERVER_IP> -p NFS_SHARE_DATABASE=<DATABASE_NFS_SHARE_PATH> -p NFS_SHARE_USERSTORE=<USERSTORE_NFS_SHARE_PATH> -p NFS_SHARE_TENANT=<TENANT_SHARE_PATH> | oc create -f -`
-
-4. Access product management consoles.
-   Obtain the (HOST/PORT) of the route resource.
-   
-   `oc get route`
-   
-   Try navigating to `https://<HOST:PORT>` from your favorite browser.
-
+* [A clustered deployment of WSO2 Identity Server](is-pattern-1/README.md)
