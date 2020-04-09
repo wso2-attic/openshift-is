@@ -39,7 +39,7 @@
 4. Access product management consoles.
    Obtain the (HOST/PORT) of the route resource.
    
-   `oc get route -n <NAMESPACE>`
+   `oc get route -n <PROJECT_NAME>`
    
    Try navigating to `https://<HOST:PORT>` from your favorite browser.
 
@@ -52,7 +52,7 @@ The following tables lists the configurable parameters of the template and their
 |`OPENSHIFT_PROJECT_NAME`|Name of the OpenShift project|wso2|
 |`NAME`|Name of the deployment|wso2is|
 |`REPLICAS`|Number of replicas|2|
-|`WSO2_IS_IMAGE_NAME`|WSO2 Identity Server image name|docker.wso2.com/wso2is:5.9.0|
+|`WSO2_IS_IMAGE_NAME`|WSO2 Identity Server image name|docker.wso2.com/wso2is:5.10.0|
 |`IMAGE_PULL_SECRET`|WSO2 Subscription Credentials|wso2-image-pull-secret|
 |`NFS_SERVER_IP`|NFS Server IP|`required`|
 |`NFS_SHARE_DATABASE`|NFS Share Path for database|`required`|
